@@ -1,3 +1,9 @@
+:root {
+  --primary-color: white;
+}
+[data-theme="dark"] {
+  --primary-color: black;
+}
 .toggle__dot {
   top: -0.25rem;
   left: -0.25rem;
@@ -7,4 +13,18 @@
 input:checked ~ .toggle__dot {
   transform: translateX(100%);
   background-color: #48bb78;
+}
+div {
+  animation-fill-mode: forwards;
+}
+body {
+  background: var(--primary-color);
+  transition: background 1s;
+}
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
 }

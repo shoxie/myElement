@@ -47,9 +47,17 @@
       if (btn.checked) {
         console.log("check");
         $("html.mode").addClass("dark");
+        $("html.mode").addClass("transition");
+        setTimeout(() => {
+          $("html.mode").removeClass("transition");
+        }, 1000);
       } else {
         console.log("not check");
         $("html.mode").removeClass("dark");
+        $("html.mode").addClass("transition");
+        setTimeout(() => {
+          $("html.mode").removeClass("transition");
+        }, 1000);
       }
     });
   </script>
