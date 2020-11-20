@@ -16,17 +16,21 @@
     <section
       class="flex flex-col items-center justify-center min-h-screen gap-5"
     >
-      <div>
+      <!-- <div>
         <button class="playbtn p-4 bg-blue-300 rounded-full">Play</button>
-      </div>
+      </div> -->
       <div class="flex flex-col items-center justify-center gap-5">
         <img src="./images/dish.png" class="rounded-full thumbnail" />
-        <h1 class="hide1"><span class="text-intro text-4xl font-bold">Gordon beef steak</span></h1>
         <h1 class="hide1">
-          <span class="text-intro"><strong>Địa chỉ:</strong> cầu thị nghè</span>
+          <span class="text-intro text-4xl font-bold">Gordon beef steak</span>
         </h1>
         <h1 class="hide1">
-          <span class="text-intro"
+          <span class="text-intro text-2xl"
+            ><strong>Địa chỉ:</strong> cầu thị nghè</span
+          >
+        </h1>
+        <h1 class="hide1">
+          <span class="text-intro bg-blue-600 px-5 py-4 rounded-full text-white"
             >Chỉ đường tới đây <i class="fad fa-map-marker"></i
           ></span>
         </h1>
@@ -51,19 +55,49 @@
   <script>
     gsap.registerPlugin(ScrollTrigger);
     $(".playbtn").on("click", function () {
-      gsap.to(".thumbnail", {
-        ease: "power1.out",
-        rotation: "-170_short",
-        duration: 1,
-        scale: 1.1,
-      });
-      gsap.to(".text-intro", {
-        y: "0%",
-        duration: 1,
-        stagger: 0.25,
-        delay: 1,
-        ease: "power1.out",
-      });
+      // gsap.to(".thumbnail", {
+      //   ease: "power1.out",
+      //   rotation: "-360",
+      //   duration: 3,
+      //   scale: 1.1,
+      // });
+      // gsap.to(".hide1", {
+      //   opacity: 1,
+      // });
+      // gsap.to(".text-intro", {
+      //   y: "0%",
+      //   duration: 1,
+      //   stagger: 0.5,
+      //   delay: 1,
+      //   ease: "power1.out",
+      // });
+    });
+    $(document).ready(function () {
+      setTimeout(() => {
+        const tl = new gsap.timeline()
+          .to(
+            ".thumbnail",
+            {
+              ease: "power1.out",
+              y: "-20%",
+              // rotation: "-360",
+              duration: 1,
+              scale: 1.2,
+            },
+            1
+          )
+          .to(
+            ".text-intro",
+            {
+              y: "0%",
+              duration: 1.5,
+              stagger: 0.2,
+              ease: "power1.out",
+            },
+            1
+          );
+        tl.play();
+      }, 500);
     });
   </script>
 </html>

@@ -6,9 +6,9 @@
 }
 .hide1 {
   background: transparent;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .hide1 span {
-  transform: translateY(100%);
+  transform: translateY(500px);
   display: inline-block;
 }
