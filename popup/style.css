@@ -1,9 +1,3 @@
-.mapmarker span {
-  transform: translateY(100%);
-  display: inline-block;
-}
-.thumbnail {
-}
 .hide1 {
   background: transparent;
   overflow: hidden;
@@ -11,4 +5,7 @@
 .hide1 span {
   transform: translateY(100%);
   display: inline-block;
+}
+.slider {
+  transform: translateY(-100%);
 }
