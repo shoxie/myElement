@@ -85,11 +85,15 @@
     })
     $('.login_btn').on('click', function () {
         tl.to('.login', { duration: 1, x: "50%", opacity: 0, ease: 'power1.out' })
+            .to('.login_text', { y: "-100%", ease: 'power1.out' })
             .to('.register', { duration: 1, top: "30%", opacity: 1, ease: 'power1.out' })
+            .to('.login_text', { y: "0%", duration: 1.5, ease: 'power1.out' })
     })
     $('.register_btn').on('click', function () {
         tl.to('.register', { duration: 1, top: "-30%", opacity: 0, ease: 'power1.out' })
+            .to('.login_text', { y: "100%", ease: 'power1.out' })
             .to('.login', { duration: 1, x: "0%", opacity: 1, ease: 'power1.out' })
+            .to('.login_text', { y: "0%", duration: 1.5, ease: 'power1.out' })
     })
 </script>
 
