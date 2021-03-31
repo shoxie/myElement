@@ -14,7 +14,9 @@ module.exports = {
     extend: {
       borderWidth: ["focus"],
       borderColor: ["focus"],
-      fill: ['dark']
+      fill: ["dark"],
+      scale: ["dark"],
+      fontSize :['dark']
     },
   },
   plugins: [],
